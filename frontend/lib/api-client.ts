@@ -17,21 +17,21 @@ export const jsonFetcher = async (url: string) => {
 }
 
 export function useIdeas() {
-  return useSWR<Idea[]>(`${API_BASE}/api/ideas`, async (u) => {
+  return useSWR<Idea[]>(`${API_BASE}/api/ideas`, async (u: string) => {
     const json = await jsonFetcher(u)
     return json?.ideas ?? []
   })
 }
 
 export function useIdea(id?: string) {
-  return useSWR<Idea>(id ? `${API_BASE}/api/ideas/${id}` : null, async (u) => {
+  return useSWR<Idea>(id ? `${API_BASE}/api/ideas/${id}` : null, async (u: string) => {
     const json = await jsonFetcher(u)
     return json?.idea
   })
 }
 
 export function useEvaluationsForIdea(ideaId?: string) {
-  return useSWR<Evaluation[]>(ideaId ? `${API_BASE}/api/evaluations/idea/${ideaId}` : null, async (u) => {
+  return useSWR<Evaluation[]>(ideaId ? `${API_BASE}/api/evaluations/idea/${ideaId}` : null, async (u: string) => {
     const json = await jsonFetcher(u)
     return json?.evaluations ?? []
   })
