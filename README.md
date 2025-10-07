@@ -1,4 +1,4 @@
-# MIB Startup Idea Evaluator (Full Stack)
+# Idea Evaluator (Full Stack)
 
 Evaluate startup ideas with a simple, opinionated scoring model, AI Assist, and reports. This repo contains:
 
