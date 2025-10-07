@@ -1,6 +1,8 @@
 # Idea Evaluator (Full Stack)
 
-Evaluate startup ideas with a simple, opinionated scoring model, AI Assist, and reports. This repo contains:
+A fast, AI-assisted way to score and compare startup ideas.
+
+This repo contains:
 
 - server/ — Express + MongoDB backend (Mongoose), with AI providers and reports
 - frontend/ — Next.js (TypeScript) app (shadcn/ui) — complete UX including wizard, charts, and AI panel
